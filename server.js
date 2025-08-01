@@ -15,9 +15,9 @@ const footerContentRoutes = require("./routes/footerContent");
 const adminAuthRouter = require("./routes/adminAuth");
 
 // 顯示 Cloudinary 資訊供除錯用
-console.log("Loaded CLOUD_NAME:", process.env.CLOUD_NAME);
-console.log("Loaded API_KEY:", process.env.API_KEY);
-console.log("Loaded API_SECRET:", process.env.API_SECRET);
+// console.log("Loaded CLOUD_NAME:", process.env.CLOUD_NAME);
+// console.log("Loaded API_KEY:", process.env.API_KEY);
+// console.log("Loaded API_SECRET:", process.env.API_SECRET);
 
 const app = express();
 
