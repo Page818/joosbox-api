@@ -1,0 +1,22 @@
+const mongoose = require("mongoose");
+const bcrypt = require("bcrypt");
+
+const adminSchema = new mongoose.Schema({
+	account: {
+		type: String,
+		required: true,
+		unique: true,
+	},
+	password: {
+		type: String,
+		required: true,
+	},
+});
+
+// 密碼比對函式
+adminSchema.methods.comparePassword = function (inputPassword) {
+	return bcrypt.compare(inputPassword, this.password);
+};
+
+const Admin = mongoose.model("Admin", adminSchema);
+module.exports = Admin;
